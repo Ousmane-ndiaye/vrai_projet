@@ -1,0 +1,32 @@
+admin_index:
+  path:     /
+  defaults: { _controller: RESERVATIONBundle:Admin:index }
+
+
+admin_accueil:
+  path:     /accueil
+  defaults: { _controller: RESERVATIONBundle:Admin:accueil }
+
+admin_reservation:
+  path:     /reservation
+  defaults: { _controller: RESERVATIONBundle:Admin:reservation }
+
+
+admin_detail_reservation:
+  path:     /detail
+  defaults: { _controller: RESERVATIONBundle:Admin:detail }
+
+
+admin_contrat:
+  path:     /contrat
+  defaults: { _controller: RESERVATIONBundle:Admin:contrat }
+
+
+admin_biens_sousbiens:
+  path:     /biens_sousbiens
+  defaults: { _controller: RESERVATIONBundle:Admin:biens_sousbiens }
+
+
+requete_ajax:
+  path:     /requete_ajax
+  defaults: { _controller: RESERVATIONBundle:Admin:requete_ajax }

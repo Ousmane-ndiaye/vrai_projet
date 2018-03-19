@@ -1,0 +1,100 @@
+#photo-profil {
+    border: 1.5px solid #30a5ff;
+    width: 75px;
+    height: 75px;
+    margin-left: 10px;
+    border-radius: 50px 50px 50px 50px;
+    padding: 0;
+}
+
+#photo-profil img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#utilisateur {
+    position: absolute;
+    left: 75px;
+    top: 25px;
+}
+
+#th_1 {
+    background: #30a5ff;
+    color: white;
+}
+
+td,
+th {
+    text-transform: uppercase;
+}
+
+#liste_reservation tr {
+    border: 1px solid #30a5ff;
+}
+
+#liste_reservation th {
+    text-align: center;
+    font-size: 12px;
+}
+
+#th_2 td {
+    text-align: center;
+    color: #1a2b3c;
+    font-size: 12px;
+    border: 1px solid #30a5ff;
+    font-weight: bold;
+}
+
+#liste_reservation td {
+    border-left: 1px solid #30a5ff;
+    border-right: 1px solid #30a5ff;
+    border-bottom: 1px solid #30a5ff;
+    font-size: 12px;
+}
+
+.bien_photo img {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 60px;
+}
+
+.ul_detail {
+    list-style-type: none;
+}
+
+.ul_detail li {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.ul_detail li span.faux_droite {
+    color: #1a2b3c;
+}
+
+.ul_description {
+    list-style-type: none;
+}
+
+.ul_description li {
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+.ul_description .ele_description {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #1a2b3c;
+    padding: 3px 0px 3px 5px;
+}
+
+.ul_description .reponse_description {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1a2b3c;
+    padding: 3px 0px 3px 5px;
+}

@@ -1,0 +1,15 @@
+reservation_index:
+  path:     /
+  defaults: { _controller: RESERVATIONBundle:Reservation:index }
+
+reservation_catalogue:
+  path:     /catalogue
+  defaults: { _controller: RESERVATIONBundle:Reservation:catalogue }
+
+reservation_connexion:
+  path:     /connexion
+  defaults: { _controller: RESERVATIONBundle:Reservation:connexion }
+
+reservation_approuver:
+  path:     /approuver
+  defaults: { _controller: RESERVATIONBundle:Reservation:approuver }

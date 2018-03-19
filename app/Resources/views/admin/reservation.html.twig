@@ -1,0 +1,64 @@
+{% extends 'base1.html.twig' %}
+{% block accueil %}
+    {{ 'class=" "' }}
+{% endblock %}
+{% block titre_page_li %}
+    Réservation
+{% endblock %}
+{% block titre_page_h1 %}
+    Gestion des réservations
+{% endblock %}
+{% block contenus %}
+<div class="row" id="charge_reservation">
+    <div class="col-md-12" id="tableau">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Liste des demandes de réservation
+                <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
+            </div>
+            <div class="panel-body">
+                <table class="table table-{1:inverse} table-inverse table-responsive" id="liste_reservation">
+                    <thead class="thead-inverse">
+                        <tr id="th_1">
+                            <th style="width: 47.5%; border-right: 1px solid white; height: 20px;" colspan="4">Client</th>
+                            <th style="width: 47.5%; border-right: 1px solid white; height: 20px;" colspan="4">Bien</th>
+                            <th style="width: 5%; height: 20px;" colspan="1">Détails</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="th_2">
+                            <!-- CLIENT -->
+                            <td style="width: 2%;">#</td>
+                            <td style="width: 17%;">Prénom & Nom</td>
+                            <td style="width: 23%;"> E-mail</td>
+                            <td style="width: 8%;">Téléphone</td>
+                            <!-- /.CLIENT -->
+                            <!-- BIEN -->
+                            <td style="width: 15%;">Nom</td>
+                            <td style="width: 10%;">Image</td>
+                            <td style="width: 10%;">Adresse</td>
+                            <td style="width: 10%;">Montant</td>
+                            <td style="width: 5%;">&nbsp;</td>
+                            <!-- /.BIEN -->
+                        </tr>
+                        {% for reservation in reservations %}
+                        <tr>
+                            <td scope="row">{{ loop.index }}</td>
+                            <td>{{ reservation.nomClient }}</td>
+                            <td>{{ reservation.Client_email }}</td>
+                            <td>{{ reservation.Client_telephone }}</d>
+                            <td>{{ reservation.nomBien}}</td>
+                            <td class="bien_photo"><img src="{{ asset(reservation.chemin) }}"/></td>
+                            <td>{{ reservation.adresse}}</td>
+                            <td>{{ reservation.prixLoc}} f</td>
+                            <td><a class="btn btn-primary voir_detail" data-idreservation="{{ reservation.Reservation_id }}" data-idbien="{{ reservation.Bien_id }}" data-idclient="{{ reservation.Client_id }}" title="Voir les détails">voir</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/.row-->
+{% endblock %}

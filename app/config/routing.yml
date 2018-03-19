@@ -1,0 +1,7 @@
+reservation:
+    resource: "@RESERVATIONBundle/Resources/config/routing.yml"
+    prefix:   /soultana
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

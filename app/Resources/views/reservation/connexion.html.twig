@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+{% block title %}Connexion{% endblock %}
+{% block contenus %}
+<div class="page-head">
+    <div class="container">
+        <div class="row">
+            <div class="page-head-content">
+                <h1 class="page-title">Accueil Nouveau compte / Connexion </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End page header -->
+
+<!-- register-area -->
+<div class="register-area" style="background-color: rgb(249, 249, 249);">
+    <div class="container">
+
+        <div class="col-md-6">
+            <div class="box-for overflow">
+                <div class="col-md-12 col-xs-12 register-blocks">
+                    <h2>Nouveau compte : </h2>
+                    <form action="" method="post" data-form="form_inscription">
+                        <div class="alert alert-danger cacher" id="form_inscription" role="alert">
+                            <ul>
+                            </ul>
+                        </div>
+                        <input type="hidden" name="typeformInscrit" id="typeformInscrit" value="inscription"/>
+                        <input type="hidden" name="idBienInscrit" id="idBienInscrit" value="{{ bien[0].id }}"/>
+                        <div class="form-group">
+                            <label for="nomClient">Prénom et Nom</label>
+                            <input type="text" class="form-control" name="nomClientInscrit" id="nomClientInscrit" data-champ="Prénom et Nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="numCni">Numéro pièce</label>
+                            <input type="number" class="form-control" name="numCniInscrit" id="numCniInscrit" data-champ="numéro pièce">
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" class="form-control" name="adresseInscrit" id="adresseInscrit" data-champ="Adresse">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="emailInscrit" id="emailInscrit" data-champ="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">téléphone</label>
+                            <input type="number" class="form-control" name="telephoneInscrit" id="telephoneInscrit" data-champ="téléphone">
+                        </div>
+                        <div class="form-group">
+                            <label for="login">nom d'utilisateur</label>
+                            <input type="text" class="form-control" name="loginInscrit" id="loginInscrit" data-champ="nom d'utilisateur">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="passwordInscrit" id="passwordInscrit" data-champ="mot de passe">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-default">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="box-for overflow">
+                <div class="col-md-12 col-xs-12 login-blocks">
+                    <h2>Connexion : </h2>
+                    <form action="" method="post" data-form="form_connexion">
+                        <div class="alert alert-danger cacher" id="form_connexion" role="alert">
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <input type="hidden" name="typeform" id="typeform" value="connexion"/>
+                        <input type="hidden" name="idBien" id="idBien" value="{{ bien[0].id }}"/>
+                        <div class="form-group">
+                            <label for="login">Nom d'utilisateur</label>
+                            <input type="text" class="form-control" name="login" id="login" data-champ="nom d'utilisateur">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" data-champ="mot de passe">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-default">Se connecter</button>
+                        </div>
+                    </form>
+                    <br>
+
+                    <h2>Social login : </h2>
+
+                    <p>
+                        <a class="login-social" href="#"><i class="fa fa-facebook"></i>&nbsp;Facebook</a>
+                        <a class="login-social" href="#"><i class="fa fa-google-plus"></i>&nbsp;Gmail</a>
+                        <a class="login-social" href="#"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

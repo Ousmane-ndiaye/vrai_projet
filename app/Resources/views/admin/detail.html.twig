@@ -1,0 +1,183 @@
+{% extends 'base1.html.twig' %}
+{% block accueil %}
+    {{ 'class=" "' }}
+{% endblock %}
+{% block titre_page_li %}
+    Réservation
+{% endblock %}
+{% block titre_page_h1 %}
+    Gestion des réservations
+{% endblock %}
+{% block contenus %}
+    <div class="row" id="charge_detail">
+        <div class="col-md-12">
+            <div class="panel panel-default dark-overlay">
+                <div class="panel-heading">Détail du demande de réservation faites par {{ reservation[0].nomClient }}
+                    <span class="pull-right clickable panel-toggle  panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
+                </div>
+                <div class="panel-body row">
+                    <div class="col-md-4">
+                        <div class="panel panel-primary panel-body">
+                            <img style="margin:0; padding:0; width:100%;" src="{{asset(reservation[0].chemin)}}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary panel-body">
+                            <img style="margin:0; padding:0; width:100%;" src="{{asset(reservation[0].chemin)}}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary panel-body">
+                            <img style="margin:0; padding:0; width:100%;" src="{{asset(reservation[0].chemin)}}" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-6">
+            <div class="panel panel-blue">
+                <div class="panel-heading dark-overlay">Détails du bien
+                    <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+                </div>
+                <div class="panel-body row">
+                    <ul class="col-md-4 ul_detail">
+                        <li>
+                            <span class="droite"> nom  </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> adresse </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> localité </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> type </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> proprietaire </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> montant </span> :
+                        </li>
+                    </ul>
+                    <ul class="col-md-8 ul_detail">
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].nomBien }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].adresse }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].nomVille ~", "~reservation[0].nomQuartier }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].nomTypeBien }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].nomComplet }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].prixLoc}} fcfa </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/.col-->
+        <div class="col-md-6">
+            <div class="panel panel-blue">
+                <div class="panel-heading dark-overlay">Détails du client
+                    <span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+                </div>
+                <div class="panel-body row">
+                    <ul class="col-md-4 ul_detail">
+                        <li>
+                            <span class="droite"> prénom & nom  </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> Numéro cni </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> adresse </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> e-mail </span> :
+                        </li>
+                        <li>
+                            <span class="droite"> téléphone </span> :
+                        </li>
+                    </ul>
+                    <ul class="col-md-8 ul_detail">
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].nomClient }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].Client_cni }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].Client_adresse }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].Client_email }} </span>
+                        </li>
+                        <li>
+                            <span class="faux_droite"> {{ reservation[0].Client_telephone }} </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"> Description
+                    <span class="pull-right clickable panel-toggle  panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
+                </div>
+                <div class="panel-body row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary panel-body">
+                            <p>
+                                {{ reservation[0].description }}
+                            </p>
+                            <div class="panel-body row">
+                                <ul class="col-md-6 ul_description">
+                                    <li class="row">
+                                        <span class="ele_description col-md-8"> Meublé </span> <span class="reponse_description col-md-2">{% if reservation[0].meuble == false %}Non{% else %}Oui{% endif %}</span>
+                                    </li>
+                                    <li class="row">
+                                        <span class="ele_description col-md-8"> balcon </span> <span class="reponse_description col-md-2">{% if reservation[0].balcon == false %}Non{% else %}Oui{% endif %}</span>
+                                    </l>
+                                    <li class="row">
+                                        <span class="ele_description col-md-8"> parking </span> <span class="reponse_description col-md-2">{% if reservation[0].parking == false %}Non{% else %}Oui{% endif %}</span>
+                                    </li>
+                                </ul>
+                                <ul class="col-md-6 ul_description">
+                                    <li class="row">
+                                        <span class="ele_description col-md-8"> Surface </span> <span class="reponse_description col-md-2">{{ reservation[0].surface }}</span>
+                                    </li>
+                                    <li class="row">
+                                        <span class="ele_description col-md-8"> chambre à coucher </span> <span class="reponse_description col-md-2">{{ reservation[0].nbreChambre }}</span>
+                                    </li>
+                                    <li class="row">
+                                        <span class="ele_description col-md-8"> salle de bain </span> <span class="reponse_description col-md-2">{{ reservation[0].nbreSallebain }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-sm-12">
+            <span class="col-sm-3">&nbsp;</span>
+            <a class="btn btn-lg btn-primary col-sm-2" id="btn_annuler_reserve">Annuler</a>
+            <span class="col-sm-2">&nbsp;</span>
+            <a class="btn btn-lg btn-primary col-sm-2" id="btn_valider_reserve" data-idreservation="{{ reservation[0].Reservation_id }}" data-idbien="{{ reservation[0].Bien_id }}" data-idclient="{{ reservation[0].Client_id }}">Valider</a>
+            <span class="col-sm-3">&nbsp;</span>
+        </div>
+        <div class="col-sm-12">
+            &nbsp;
+        </div>
+        <!--/.col-->
+    </div>
+{% endblock %}

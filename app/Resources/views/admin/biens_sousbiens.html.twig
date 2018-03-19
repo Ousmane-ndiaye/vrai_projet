@@ -1,0 +1,139 @@
+{% extends 'base1.html.twig' %}
+{% block reservation %}
+    {{ 'class=" "' }}
+{% endblock %}
+{% block accueil %}
+    {{ 'class=" "' }}
+{% endblock %}
+{% block titre_page_li %}
+    {{ '<a href="#" >Bien</a> / <a href="#" class="active">Ville</a>' }}
+{% endblock %}
+{% block titre_page_h1 %}
+    {{ 'Gestion des réservations contrat' }}
+{% endblock %}
+{% block contenus %}
+<div id="charge_biens_sousbiens">
+    <div class="wrap-table100">
+        <div class="table100 ver3 m-b-110">
+            <div class="table100-head">
+                <table>
+                    <thead>
+                        <tr class="row100 head">
+                            <th class="cell100 column1">Class name</th>
+                            <th class="cell100 column2">Type</th>
+                            <th class="cell100 column3">Hours</th>
+                            <th class="cell100 column4">Trainer</th>
+                            <th class="cell100 column5">Spots</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div class="table100-body js-pscroll">
+                <table>
+                    <tbody>
+                        <tr class="row100 body">
+                            <td class="cell100 column1">Like a butterfly</td>
+                            <td class="cell100 column2">Boxing</td>
+                            <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                            <td class="cell100 column4">Aaron Chapman</td>
+                            <td class="cell100 column5">10</td>
+                        </tr>
+
+                        <tr class="row100 body">
+                            <td class="cell100 column1">Mind & Body</td>
+                            <td class="cell100 column2">Yoga</td>
+                            <td class="cell100 column3">8:00 AM - 9:00 AM</td>
+                            <td class="cell100 column4">Adam Stewart</td>
+                            <td class="cell100 column5">15</td>
+                        </tr>
+
+                        <tr class="row100 body">
+                            <td class="cell100 column1">Crit Cardio</td>
+                            <td class="cell100 column2">Gym</td>
+                            <td class="cell100 column3">9:00 AM - 10:00 AM</td>
+                            <td class="cell100 column4">Aaron Chapman</td>
+                            <td class="cell100 column5">10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {# <span class="col-sm-3" ></span>
+    <div class="panel panel-default col-sm-6 form-soubiens" id="formVilleDesBiens">
+        <div class="panel-heading">Inserer une ville</div>
+        <div class="panel-body">
+            <div class=" col-6 col-md-12">
+                <form role="form" method="post" data-form="formville">
+                    <div class="alert alert-danger message" id="formville" role="alert">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>Nom du Ville</label>
+                        <input type="text" name="nom du ville" data-champ="Nom du ville" class="form-control" placeholder="Placeholder">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="saveville" class="btn btn-md btn-primary" value="Enregistrer"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <span class="col-sm-3" ></span>
+    <span class="col-sm-3" ></span>
+    <div class="panel panel-default col-sm-6 form-soubiens" id="formTypeBienDesBiens">
+        <div class="panel-heading">Inserer un type de bien</div>
+        <div class="panel-body">
+            <div class=" col-6 col-md-12">
+                <form role="form" method="post" data-form="formtype">
+                    <div class="alert alert-danger message" id="formtype" role="alert">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>Nom du bien</label>
+                        <input type="text" name="nomTypeBien" data-champ="Nom du type" class="form-control" placeholder="Placeholder">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="savetype" class="btn btn-md btn-primary" value="Enregistrer"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <span class="col-sm-3" ></span>
+    <span class="col-sm-3" ></span>
+    <div class="panel panel-default col-sm-6 form-soubiens" id="formQuartierDesBiens">
+        <div class="panel-heading">Inserer un quartier</div>
+        <div class="panel-body">
+            <div class=" col-6 col-md-12">
+                <form role="form" method="post" data-form="formquartier">
+                    <div class="alert alert-danger message" id="formquartier" role="alert">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>Ville</label>
+                        <select name="idVille" data-champ="de selection de ville" class="form-control">
+                            {% for ville in villes %}
+                                <option value="{{ville.id}}">{{ville.nomVille}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Nom du quartier</label>
+                        <input type="text" name="nomQuartier" data-champ="Nom de quartier" class="form-control" placeholder="Placeholder">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-md btn-primary" name="savequartier" value="Enregistrer"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <span class="col-sm-3" ></span> #}
+</div>
+{% endblock %}
